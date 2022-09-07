@@ -129,8 +129,8 @@ export default app;
 			y = e.clientY - center.y,
 			d = R2D * Math.atan2(y, x);
 		rotation = d - startAngle;
-		rot.style.transition = "transform 0.5s ease-out 0s";
-		return rot.style.transform = "rotate(" + (angle + rotation) + "deg)";
+		rot.style.transition = `transform 1s`;
+		return rot.style.transform = `rotate(${angle + rotation}deg)`;
 	};
 
 	stop = function () {
