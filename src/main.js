@@ -17,13 +17,13 @@ export default app;
 
 	init = function () {
 		// Mouse Events
-		drag.addEventListener('mousedown', start, false);
-		document.addEventListener('mousemove', function (event) {
+		drag.addEventListener('pointerdown', start, false);
+		document.addEventListener('pointermove', function (event) {
 			if (active === true) {
 				move(event);
 			}
 		});
-		document.addEventListener('mouseup', function (event) {
+		document.addEventListener('pointerup', function (event) {
 			stop(event.originalEvent);
 		});
 	};
@@ -92,14 +92,14 @@ export default app;
 		rot = document.getElementById('rotate');
 
 	init = function () {
-		rot.addEventListener("mousedown", start, false);
-		document.addEventListener('mousemove', function (event) {
+		rot.addEventListener("pointerdown", start, false);
+		document.addEventListener('pointermove', function (event) {
 			if (active === true) {
 				event.preventDefault();
 				rotate(event);
 			}
 		});
-		document.addEventListener('mouseup', function (event) {
+		document.addEventListener('pointerup', function (event) {
 			event.preventDefault();
 			stop(event);
 		});
