@@ -1,0 +1,109 @@
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	padding: 8px;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+#container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#draggable {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+}
+
+#drag {
+	width: 10%;
+	height: 10%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto auto;
+	position: absolute;
+}
+
+#rotate {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-image: url('banana.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position-y: 24px;
+}
+#rotate::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 3% auto;
+    height: 12%;
+    width: 1.4%;
+    border-radius: 25%;
+}
